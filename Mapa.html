@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>AquaCheck - Mapa</title>
+
+
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+    <link rel="stylesheet" href="stylesmapa.css">
+
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+
+<div class="layout">
+
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <img src="AquaCheck.jpg">
+            <h3>AQUA CHECK</h3>
+            <span>Usuario</span>
+        </div>
+
+        <a class="menu-list">
+            <a href="inicio.html"><button class="menu"><i class="fa-solid fa-house"></i> Inicio</button></a>
+            <button class="menu active"><i class="fa-solid fa-map"></i> Mapa</button>
+            <a href="educacion.html"><button class="menu"><i class="fa-solid fa-graduation-cap"></i> Educación</button></a>
+            <a href="Tendencias.html"><button class="menu"><i class="fa-solid fa-chart-line"></i> Tendencias</button></a>
+            <a href="Notificaciones.html"></a><button class="menu"><i class="fa-solid fa-bell"></i> Notificaciones</button></a>
+            <a href="IA.html"><button class="menu ia"><i class="fa-solid fa-robot"></i> IA</button></a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="Perfil.html"><button class="menu"><i class="fa-solid fa-user"></i> Mi perfil</button></a>
+            <a href="Configuraciones.html"><button class="menu"><i class="fa-solid fa-gear"></i> Configuración</button></a>
+            <a href="Loguin.html"><button class="menu"><i class="fa-solid fa-power-off"></i> Cerrar sesión</button></a>
+        </div>
+
+    </aside>
+
+
+    <main class="content">
+
+
+        <div class="page-header">
+            <div>
+                <h2>Mapa de Colombia</h2>
+                <p>Monitorea la calidad del agua en tiempo real</p>
+            </div>
+
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Buscar muestras, ubicaciones">
+            </div>
+        </div>
+
+    
+        <div class="filters">
+            <h3>Filtros del Mapa</h3>
+
+            <div class="filter-row">
+                <div>
+                    <label>Estado:</label>
+                    <select>
+                        <option>Todos</option>
+                        <option>Potable</option>
+                        <option>Advertencia</option>
+                        <option>No potable</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>Fecha:</label>
+                    <select>
+                        <option>Todas</option>
+                        <option>Hoy</option>
+                        <option>Esta semana</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="map-grid">
+
+
+            <div class="card">
+                <h3>Mapa de Muestras de Agua</h3>
+                <p>Haz clic en los marcadores para ver detalles de cada muestra</p>
+
+
+                <div id="mapa" class="map-img"></div>
+
+                <div class="legend">
+                    <span><i class="fa-solid fa-location-dot green"></i> Potable</span>
+                    <span><i class="fa-solid fa-location-dot orange"></i> Advertencia</span>
+                    <span><i class="fa-solid fa-location-dot red"></i> No Potable</span>
+                </div>
+            </div>
+
+            <div class="card details">
+                <h3><i class="fa-solid fa-circle-info"></i> Detalles de la Muestra</h3>
+
+                <div class="empty" id="detalle">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Selecciona un marcador en el mapa para ver los detalles</p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="stats">
+
+            <div class="stat green">
+                <i class="fa-solid fa-location-dot"></i>
+                <strong>2</strong>
+                <span>Muestras Potables</span>
+            </div>
+
+            <div class="stat orange">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <strong>2</strong>
+                <span>Con Advertencia</span>
+            </div>
+
+            <div class="stat red">
+                <i class="fa-solid fa-circle-xmark"></i>
+                <strong>1</strong>
+                <span>No Potables</span>
+            </div>
+
+            <div class="stat blue">
+                <i class="fa-solid fa-map"></i>
+                <strong>6</strong>
+                <span>Total</span>
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script>
+    const map = L.map('mapa').setView([4.5709, -74.2973], 5);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap'
+    }).addTo(map);
+
+    function mostrarDetalle(titulo, info) {
+        document.getElementById('detalle').innerHTML = `
+            <strong>${titulo}</strong>
+            <p>${info}</p>
+        `;
+    }
+
+    L.marker([4.7110, -74.0721]).addTo(map)
+        .bindPopup("Bogotá - Chapinero")
+        .on('click', () => mostrarDetalle(
+            'Bogotá - Chapinero',
+            'Cloro bajo · Hace 5 horas'
+        ));
+
+    L.marker([6.2442, -75.5812]).addTo(map)
+        .bindPopup("Medellín")
+        .on('click', () => mostrarDetalle(
+            'Medellín',
+            'Agua potable · Hace 2 horas'
+        ));
+
+    L.marker([3.4516, -76.5320]).addTo(map)
+        .bindPopup("Cali")
+        .on('click', () => mostrarDetalle(
+            'Cali',
+            'No potable · Hace 1 día'
+        ));
+</script>
+
+</body>
+</html>

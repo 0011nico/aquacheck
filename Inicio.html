@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>AquaCheck - Usuario</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="Stylees.css">
+</head>
+<body>
+
+<aside class="sidebar">
+    <div>
+        <div class="brand">
+            <img src="AquaCheck.jpg">
+            <h2>AQUA CHECK</h2>
+            <span>Usuario</span>
+        </div>
+
+        <nav>
+        <a href="inicio.html">
+         <button class="menu active">
+        <i class="fa-solid fa-house"></i> Inicio
+         </button>
+        </a>
+
+        <a href="mapa.html">
+         <button class="menu">
+        <i class="fa-solid fa-map-location-dot"></i> Mapa
+         </button>
+        </a>
+
+        <a href="Educacion.html">
+        <button class="menu">
+           <i class="fa-solid fa-book-open"></i> Educación
+        </button>
+        </a>
+        <a href="Tendencias.html">
+        <button class="menu">
+           <i class="fa-solid fa-chart-line"></i> Tendencias
+        </button>
+        </a>
+        <a href="Notificaciones.html">
+        <button class="menu">
+           <i class="fa-solid fa-bell"></i> Notificaciones
+        </button>
+        </a>
+        <a href="IA.html">
+        <button class="menu ia">
+           <i class="fa-solid fa-robot"></i> IA
+        </button>
+        </a>
+        </nav>
+
+    </div>
+
+    <div class="sidebar-footer">
+    <a href="Perfil.html">
+    <button class="menu">
+        <i class="fa-solid fa-user"></i>
+        Mi perfil
+    </button>
+     </a>
+     <a href="Configuraciones.html">
+    <button class="menu">
+        <i class="fa-solid fa-gear"></i>
+        Configuración
+    </button>
+    </a>
+    <a href="Loguin.html">
+    <button class="menu logout">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        Cerrar sesión
+    </button>
+    </a>
+
+</div>
+
+</aside>
+
+
+<main class="content">
+
+
+    <header class="header">
+        <div>
+            <h1>Inicio</h1>
+            <p>Monitorea la calidad del agua en tiempo real</p>
+        </div>
+
+        <div class="search">
+            <i class="fa fa-search"></i>
+            <input placeholder="Buscar muestras, ubicaciones">
+        </div>
+    </header>
+
+
+    <section class="banner">
+        <div>
+            <h2>¡Bienvenido a AquaCheck!</h2>
+            <p>Monitorea la calidad del agua en tu zona y mantente informado sobre alertas en tiempo real.</p>
+        </div>
+        <img src="AquaCheck.jpg" class="logo-banner">
+    </section>
+
+
+    <section class="summary">
+        <div class="card">
+            <h4>Zonas Seguras</h4>
+            <span class="green">3</span>
+            <i class="fa-solid fa-check-circle"></i>
+        </div>
+        <div class="card">
+            <h4>Advertencias</h4>
+            <span class="orange">2</span>
+            <i class="fa-solid fa-triangle-exclamation"></i>
+        </div>
+        <div class="card">
+            <h4>Zonas Peligrosas</h4>
+            <span class="red">1</span>
+            <i class="fa-solid fa-circle-xmark"></i>
+        </div>
+        <div class="card">
+            <h4>Alertas Activas</h4>
+            <span class="blue">2</span>
+            <i class="fa-solid fa-bell"></i> 
+        </div>
+    </section>
+
+
+    <section class="grid">
+
+
+        <div class="box">
+            <h3>⚠ Alertas Recientes en tu Zona</h3>
+
+            <div class="alert">
+                <i class="fa-solid fa-circle-exclamation red"></i>
+                <div>
+                    <strong>Medellín - El Poblado</strong>
+                    <p>Turbidez elevada · Hace 2 horas</p>
+                </div>
+            </div>
+
+            <div class="alert">
+                <i class="fa-solid fa-triangle-exclamation orange"></i>
+                <div>
+                    <strong>Bogotá - Chapinero</strong>
+                    <p>Cloro bajo · Hace 5 horas</p>
+                </div>
+            </div>
+
+            <button class="btn-gradient">Ver todas las alertas</button>
+        </div>
+
+
+        <div class="box">
+            <h3>Zonas Cercanas</h3>
+
+            <div class="zone">
+                Bogotá - Usaquén
+                <div class="bar"><div style="width:95%"></div></div>
+            </div>
+
+            <div class="zone">
+                Bogotá - Suba
+                <div class="bar"><div style="width:90%"></div></div>
+            </div>
+
+            <div class="zone">
+                Bogotá - Chapinero
+                <div class="bar orange"><div style="width:75%"></div></div>
+            </div>
+
+            <div class="zone">
+                Bogotá - Kennedy
+                <div class="bar"><div style="width:92%"></div></div>
+            </div>
+
+            <button class="btn-outline">Ver mapa completo</button>
+        </div>
+
+    </section>
+
+
+  <section class="box">
+    <h3>Consejos para Identificar Agua de Calidad</h3>
+
+    <div class="tips">
+
+        <div class="tip-card">
+            <i class="fa-solid fa-eye"></i>
+            <div>
+                <strong>Verifica el color</strong>
+                <p>El agua potable debe ser completamente clara y sin color.</p>
+            </div>
+        </div>
+
+        <div class="tip-card">
+            <i class="fa-solid fa-wind"></i>
+            <div>
+                <strong>Revisa el olor</strong>
+                <p>El agua segura no debe presentar ningún olor desagradable.</p>
+            </div>
+        </div>
+
+        <div class="tip-card">
+            <i class="fa-solid fa-vial-circle-check"></i>
+            <div>
+                <strong>Análisis regular</strong>
+                <p>Realiza análisis cada 6 meses si cuentas con sistema propio.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="trend-grid">
+
+
+    <div class="box">
+        <h3>📈 Mejorando esta semana</h3>
+
+        <div class="trend positive">
+            <i class="fa-solid fa-arrow-trend-up"></i>
+            <span>Cali - Norte</span>
+            <strong>+15%</strong>
+        </div>
+
+        <div class="trend positive">
+            <i class="fa-solid fa-arrow-trend-up"></i>
+            <span>Bucaramanga - Cabecera</span>
+            <strong>+11%</strong>
+        </div>
+
+        <div class="trend positive">
+            <i class="fa-solid fa-arrow-trend-up"></i>
+            <span>Armenia - Centro</span>
+            <strong>+9%</strong>
+        </div>
+    </div>
+
+
+    <div class="box">
+        <h3>⚠ Requiere Atención</h3>
+
+        <div class="trend negative">
+            <i class="fa-solid fa-arrow-trend-down"></i>
+            <span>Medellín - El Poblado</span>
+            <strong>-14%</strong>
+        </div>
+
+        <div class="trend negative">
+            <i class="fa-solid fa-arrow-trend-down"></i>
+            <span>Bogotá - Chapinero</span>
+            <strong>-9%</strong>
+        </div>
+
+        <div class="trend negative">
+            <i class="fa-solid fa-arrow-trend-down"></i>
+            <span>Barranquilla - Centro</span>
+            <strong>-4%</strong>
+        </div>
+    </div>
+
+</section>

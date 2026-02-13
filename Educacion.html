@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AquaCheck - Educación</title>
+
+
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="styles-educacion.css">
+</head>
+<body>
+
+<div class="layout">
+
+
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="AquaCheck.jpg" alt="AquaCheck">
+            <h3>AQUA CHECK</h3>
+            <span>Usuario</span>
+        </div>
+
+        <nav class="menu-list">
+    <a href="Inicio.html" class="menu">
+        <i class="fa-solid fa-house"></i> Inicio
+    </a>
+
+    <a href="Mapa.html" class="menu">
+        <i class="fa-solid fa-map"></i> Mapa
+    </a>
+
+
+    <div class="menu active">
+        <i class="fa-solid fa-graduation-cap"></i> Educación
+    </div>
+
+    <a href="Tendencias.html" class="menu">
+        <i class="fa-solid fa-chart-line"></i> Tendencias
+    </a>
+
+    <a href="Notificaciones.html" class="menu">
+        <i class="fa-solid fa-bell"></i> Notificaciones
+    </a>
+</nav>
+
+<div class="sidebar-footer">
+    <a href="Perfil.html" class="menu">
+        <i class="fa-solid fa-user"></i> Mi perfil
+    </a>
+
+    <a href="Configuraciones.html" class="menu">
+        <i class="fa-solid fa-gear"></i> Configuración
+    </a>
+
+    <a href="Loguin.html" class="menu">
+        <i class="fa-solid fa-power-off"></i> Cerrar sesión
+    </a>
+</div>
+
+    </aside>
+
+
+    <main class="content">
+
+
+        <div class="page-header">
+            <div>
+                <h2>Educación: Parámetros de Calidad</h2>
+                <p>Aprende cómo interpretar la calidad del agua</p>
+            </div>
+
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Buscar artículos, guías...">
+            </div>
+        </div>
+
+
+        <section class="banner">
+            <div>
+                <h2>Parámetros de Calidad del Agua</h2>
+                <p>Conoce los indicadores clave para un consumo seguro.</p>
+            </div>
+        </section>
+
+
+        <section class="stats">
+            <div class="stat green">
+                <strong>3</strong>
+                <span>Parámetros óptimos</span>
+            </div>
+            <div class="stat orange">
+                <strong>0</strong>
+                <span>Requieren atención</span>
+            </div>
+            <div class="stat blue">
+                <strong>3</strong>
+                <span>Monitoreados</span>
+            </div>
+        </section>
+
+
+        <section class="card parametro">
+            <div class="param-header">
+                <h3>pH</h3>
+                <span class="badge green">Óptimo</span>
+            </div>
+            <p class="sub">Mide la acidez o alcalinidad del agua.</p>
+            <strong>Promedio actual: 7.2</strong>
+
+            <div class="progress">
+                <span style="width:60%"></span>
+            </div>
+
+            <ul>
+                <li>pH bajo puede corroer tuberías.</li>
+                <li>pH alto puede afectar el sabor.</li>
+            </ul>
+
+            <div class="tips">
+                <i class="fa-solid fa-lightbulb"></i>
+                El pH puede variar según la fuente.
+            </div>
+        </section>
+
+
+        <section class="card parametro">
+            <div class="param-header">
+                <h3>Cloro</h3>
+                <span class="badge green">Óptimo</span>
+            </div>
+            <p class="sub">Desinfectante que elimina microorganismos.</p>
+            <strong>Promedio actual: 0.9 mg/L</strong>
+
+            <div class="progress">
+                <span style="width:40%"></span>
+            </div>
+
+            <ul>
+                <li>Cloro bajo implica riesgo bacteriano.</li>
+                <li>Cloro alto afecta el sabor.</li>
+            </ul>
+
+            <div class="tips">
+                <i class="fa-solid fa-droplet"></i>
+                Dejar reposar el agua reduce el cloro.
+            </div>
+        </section>
+
+
+        <section class="card parametro">
+            <div class="param-header">
+                <h3>Turbidez</h3>
+                <span class="badge green">Óptimo</span>
+            </div>
+            <p class="sub">Cantidad de partículas suspendidas.</p>
+            <strong>Promedio actual: 1.5 NTU</strong>
+
+            <div class="progress">
+                <span style="width:30%"></span>
+            </div>
+
+            <ul>
+                <li>Baja turbidez = agua clara.</li>
+                <li>Alta turbidez indica fallas.</li>
+            </ul>
+
+            <div class="tips">
+                <i class="fa-solid fa-filter"></i>
+                Los filtros ayudan a reducir turbidez.
+            </div>
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+</html>

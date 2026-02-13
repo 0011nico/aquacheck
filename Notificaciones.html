@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aqua Check - Notificaciones</title>
+
+
+    <link rel="stylesheet" href="Styles-notificaciones.css">
+
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<div id="Menu">
+    <img src="AquaCheck.jpg" alt="Aqua Check">
+
+    <h2>AQUA CHECK</h2>
+    <h3>Usuario</h3>
+
+    <a href="inicio.html"> <div class="menu"><i class="fa-solid fa-house"></i> Inicio</div></a>
+    <a href="Mapa.html"> <div class="menu"><i class="fa-solid fa-map-location-dot"></i> Mapa</div></a>
+    <a href="Educacion.html"> <div class="menu"><i class="fa-solid fa-graduation-cap"></i> Educación</div></a>
+    <a href="Tendencias.html"> <div class="menu"><i class="fa-solid fa-chart-line"></i> Tendencias</div></a>
+    <div class="menu1"> <i class="fa-solid fa-bell"></i> Notificaciones</div>
+
+    <div class="menu-user">
+        <a href="Perfil.html"> <div class="menu"><i class="fa-solid fa-user"></i> Mi perfil</div></a>
+        <a href="Configuraciones.html"> <div class="menu"><i class="fa-solid fa-gear"></i> Configuración</div></a>
+        <a href="Loguin.html"> <div class="menu"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión</div></a>
+    </div>
+</div>
+
+<div id="centro">
+
+    <div class="header">
+        <div>
+            <h1>Notificaciones</h1>
+            <p class="subtitulo">Monitorea la calidad del agua en tiempo real</p>
+        </div>
+
+        <input class="buscador" type="text" placeholder="Buscar muestras, ubicaciones">
+    </div>
+
+    <div class="lista-notificaciones">
+
+        <div class="tarjeta-alerta">
+            <div class="alert-info">
+                <i class="fa-solid fa-triangle-exclamation icon ico-warning"></i>
+                <div>
+                    <h3>Bogotá – Chapinero</h3>
+                    <p>Nivel de cloro por debajo del óptimo</p>
+                    <p class="fecha">2025-10-13 14:30</p>
+                </div>
+            </div>
+            <span class="estado atencion">Atención</span>
+        </div>
+
+        <div class="tarjeta-alerta">
+            <div class="alert-info">
+                <i class="fa-solid fa-circle-xmark icon ico-danger"></i>
+                <div>
+                    <h3>Medellín – El Poblado</h3>
+                    <p>Turbidez elevada - Agua no potable</p>
+                    <p class="fecha">2025-10-13 12:15</p>
+                </div>
+            </div>
+            <span class="estado urgente">Urgente</span>
+        </div>
+
+        <div class="tarjeta-alerta">
+            <div class="alert-info">
+                <i class="fa-solid fa-circle-check icon ico-ok"></i>
+                <div>
+                    <h3>Cali – Norte</h3>
+                    <p>Calidad del agua restaurada a niveles óptimos</p>
+                    <p class="fecha">2025-10-13 10:00</p>
+                </div>
+            </div>
+            <span class="estado info">Información</span>
+        </div>
+
+        <div class="tarjeta-alerta">
+            <div class="alert-info">
+                <i class="fa-solid fa-triangle-exclamation icon ico-warning"></i>
+                <div>
+                    <h3>Barranquilla – Centro</h3>
+                    <p>pH ligeramente ácido detectado</p>
+                    <p class="fecha">2025-10-12 18:45</p>
+                </div>
+            </div>
+            <span class="estado atencion">Atención</span>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
